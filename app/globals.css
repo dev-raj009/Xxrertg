@@ -1,0 +1,125 @@
+@import "tailwindcss";
+@import "video.js/dist/video-js.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  --color-card-bg: #000000;
+  --color-card-border: rgba(255, 255, 255, 0.1);
+  --color-accent: #ffffff;
+}
+
+/* Custom Video.js Skin: VIP-STUDIO-GLOW */
+.video-js {
+  background-color: #000;
+  border-radius: 2rem;
+  overflow: hidden;
+  font-family: var(--font-sans);
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.vjs-big-play-button {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 50% !important;
+  width: 4em !important;
+  height: 4em !important;
+  line-height: 4em !important;
+  margin-top: -2em !important;
+  margin-left: -2em !important;
+  backdrop-filter: blur(12px);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.05);
+}
+
+.video-js:hover .vjs-big-play-button {
+  background-color: #ffffff !important;
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 0 60px rgba(255, 255, 255, 0.3);
+  border-color: #000 !important;
+  color: #000 !important;
+}
+
+.vjs-control-bar {
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent) !important;
+  backdrop-filter: blur(20px);
+  height: 3.5em !important;
+  padding: 0 0.5rem !important;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  display: flex !important;
+  z-index: 100 !important;
+}
+
+.vjs-button {
+  width: 3em !important;
+}
+
+.vjs-time-control {
+  font-size: 0.9em !important;
+  line-height: 3.5em !important;
+  padding: 0 0.5em !important;
+}
+
+@media (max-width: 640px) {
+  .vjs-control-bar {
+    height: 3em !important;
+    padding: 0 0.25rem !important;
+  }
+  .vjs-button {
+    width: 2.5em !important;
+  }
+  .vjs-time-control {
+    font-size: 0.8em !important;
+    line-height: 3em !important;
+    padding: 0 0.2em !important;
+  }
+  .vjs-playback-rate {
+    display: flex !important;
+  }
+}
+
+.vjs-play-progress, .vjs-volume-level {
+  background: linear-gradient(to right, #ffffff, #cccccc) !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.vjs-slider {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 4px;
+}
+
+.vjs-load-progress {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.vjs-button:hover {
+  color: #ffffff !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Professional Card Style - Dark Version */
+.glass-card {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.glass-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Utilities */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
